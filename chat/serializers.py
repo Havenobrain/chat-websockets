@@ -3,7 +3,7 @@ from .models import Room
 
 
 class RoomSerializer(serializers.ModelSerializer):
-    user = serializers.HiddenField(default=serializer.CurrentUserDefault())
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Room
