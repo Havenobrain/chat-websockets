@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Список чатов</h2>
+    <ul>
+    {% for room in rooms %}
+        <li>
+            <a href="{% url 'room' room.room_name request.user.username %}">{{ room.room_name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
